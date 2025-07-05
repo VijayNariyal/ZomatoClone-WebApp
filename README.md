@@ -163,7 +163,7 @@ echo "BACKEND_URL=http://YOUR_BACKEND_VM_IP:5000/api" > .env
 echo "FRONTEND_URL=http://YOUR_FRONTEND_VM_IP:3000" >> .env
 
 # Start only frontend service
-docker-compose run --no-deps -d frontend
+docker-compose up -d --no-deps frontend
 ```
 
 ### Option 4: Individual Docker Containers
