@@ -2,6 +2,9 @@
 
 A full-stack restaurant discovery and food ordering platform built with React, Node.js, Express, and MongoDB.
 
+### NOTE 
+This is the continue MERN web application for the Full-zomato-WebApplication we have deployed. But this for the both Localhost and for the seprate VM(frontend and backend) where this application run. 
+
 ## 🚀 Features
 
 ### User Features
@@ -69,7 +72,7 @@ npm install
 #### For Local Development
 ```bash
 # In the backend directory, create .env file
-cp .env.example .env
+cp env.example .env
 
 # Edit .env with your MongoDB connection string and JWT secret
 MONGODB_URI=mongodb://localhost:27017/foodhub
@@ -80,7 +83,7 @@ PORT=5000
 #### For Docker Deployment (Same VM)
 ```bash
 # In the root directory, create .env file
-cp .env.example .env
+cp env.example .env
 
 # Use default values for same VM deployment
 BACKEND_URL=http://localhost:5000/api
@@ -90,7 +93,7 @@ FRONTEND_URL=http://localhost:3000
 #### For Docker Deployment (Separate VMs)
 ```bash
 # In the root directory, create .env file
-cp .env.example .env
+cp env.example .env
 
 # Edit with your VM IP addresses or domain names
 BACKEND_URL=http://192.168.1.100:5000/api  # Backend VM IP
@@ -106,7 +109,10 @@ FRONTEND_URL=http://192.168.1.101:3000     # Frontend VM IP
 # From the backend directory
 npm run seed
 ```
-
+```bash
+# From the docker container
+docker exec -itd foodhub-backend npm run seed
+```
 This will create sample restaurants and demo user accounts:
 - **User**: user@demo.com / password
 - **Admin**: admin@demo.com / password
